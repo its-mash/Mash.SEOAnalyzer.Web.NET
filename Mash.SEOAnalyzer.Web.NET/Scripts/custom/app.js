@@ -248,7 +248,6 @@ $(function () {
                 }, 2000);
                 if (data) {
                     var jsonData = JSON.parse(data);
-                    int
                     var noOfTables = 0;
 
                     addTitle(jsonData);
