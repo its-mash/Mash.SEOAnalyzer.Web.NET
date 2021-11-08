@@ -22,9 +22,23 @@ namespace Mash.SEOAnalyzer.Web.NET
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/libs").Include(
+                "~/Scripts/particleground.min.js",
+                "~/Scripts/custom/app.js",
+                "~/Scripts/jsgrid.js"
+                ));
+
+
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/Site.css",
+                      "~/Content/seo-custom.css",
+                      "~/Content/SeoAnalyze.css",
+                      "~/Content/themes/base/jsgrid.css",
+                      "~/Content/themes/base/jsgrid-theme.css"
+                      ));
+
         }
     }
 }

@@ -5,38 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
+    @RenderSection("styles", false)
     @Scripts.Render("~/bundles/modernizr")
+
+
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    <div class="main-content">
+        <!--<div class="wrapper-header navbar-fixed-top">
+
+            <div class="container main-header" id="header" style="padding: 30px;">-->
+        @*<a href="/">
+                <div class="logo">
+
+                    <span class="themeLogoText">
+                        <svg class="css-ze2te4 css-qd6ojx" viewBox="0 0 91 89.79038574623199"><g transform="translate(-1.0235173726593245, -1.7678935831820846) scale(0.930470318613803)" class="css-1mun45u" fill="#FFFFFF"><rect xmlns="http://www.w3.org/2000/svg" x="47.4" y="1.9" width="5.1" height="5.1"></rect><rect xmlns="http://www.w3.org/2000/svg" x="47.4" y="93.3" width="5.1" height="5.1"></rect><rect xmlns="http://www.w3.org/2000/svg" x="13.9" y="78.7" width="5.1" height="5.1"></rect><rect xmlns="http://www.w3.org/2000/svg" x="79.5" y="78.7" width="5.1" height="5.1"></rect><rect xmlns="http://www.w3.org/2000/svg" x="13.9" y="15.9" width="5.1" height="5.1"></rect><rect xmlns="http://www.w3.org/2000/svg" x="79.5" y="15.9" width="5.1" height="5.1"></rect><rect xmlns="http://www.w3.org/2000/svg" x="1.1" y="47.2" width="5.1" height="5.1"></rect><rect xmlns="http://www.w3.org/2000/svg" x="93.8" y="47.2" width="5.1" height="5.1"></rect><path xmlns="http://www.w3.org/2000/svg" d="M10.4,24.5c-3.8,5.8-6.2,12.2-7.1,19.1l-0.1,0.6h3l0.1-0.5c1-6.7,3.5-13.1,7.3-18.7l0.6-0.8h-3.5L10.4,24.5  z"></path><path xmlns="http://www.w3.org/2000/svg" d="M6.1,55.8L6,55.3H3.1l0.1,0.6c0.9,7.1,3.2,13.6,7,19.6l0.2,0.2h3.5l-0.6-0.8C9.5,69.2,7,62.6,6.1,55.8z"></path><path xmlns="http://www.w3.org/2000/svg" d="M93.7,43.8l0.1,0.5h3l-0.1-0.6c-1-6.9-3.4-13.3-7.1-19.1l-0.2-0.2h-3.5l0.6,0.8  C90.2,30.7,92.7,37.1,93.7,43.8z"></path><path xmlns="http://www.w3.org/2000/svg" d="M93.9,55.3l-0.1,0.5c-0.9,6.8-3.4,13.5-7.2,19.1L86,75.7h3.5l0.2-0.2c3.8-5.9,6.2-12.5,7-19.6l0.1-0.6  L93.9,55.3L93.9,55.3z"></path><path xmlns="http://www.w3.org/2000/svg" d="M74.1,13.2l0.1,0.1h5l-1.3-1C71.6,7.5,64,4.4,56.1,3.4l-0.6-0.1v3L56,6.4C62.5,7.3,68.6,9.5,74.1,13.2z"></path><path xmlns="http://www.w3.org/2000/svg" d="M21.9,12.3l-1.3,1h5l0.1-0.1C31.3,9.5,37.4,7.3,44,6.4l0.5-0.1v-3l-0.6,0.1C35.9,4.4,28.3,7.5,21.9,12.3z"></path><path xmlns="http://www.w3.org/2000/svg" d="M74.6,86.9c-5.6,3.7-12,6.2-18.7,7.1l-0.5,0.1v3L56,97c8.1-1.1,15.8-4.2,22.3-9.2l1.3-1L74.6,86.9  L74.6,86.9z"></path><path xmlns="http://www.w3.org/2000/svg" d="M25.3,86.9l-0.2-0.1h-4.9l1.3,1c6.5,5,14.3,8.1,22.4,9.2l0.6,0.1v-3L44,94C37.3,93.1,30.8,90.6,25.3,86.9z"></path><polygon xmlns="http://www.w3.org/2000/svg" points="36.7,59.6 24.3,49.6 36.8,40.6 39.7,44.7 32.6,49.8 39.8,55.7 "></polygon><polygon xmlns="http://www.w3.org/2000/svg" points="63.2,59.6 60.1,55.7 67.3,49.8 60.2,44.7 63.1,40.6 75.6,49.6 "></polygon><rect xmlns="http://www.w3.org/2000/svg" x="47.7" y="34" transform="matrix(0.9452 0.3264 -0.3264 0.9452 19.1192 -13.6479)" width="5" height="32.4"></rect></g></svg>
+                    </span>
+                    <span>Seo Analyzer</span>
+                </div>
+            </a>*@
+
+
+        <!--<nav class="desktop-nav">
+
+            <ul class="main-nav">
+            </ul>-->
+        @*<ul class="login-nav">
+                <li class="dropdown">
+                    <a href="javascript:void(0)" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="false"><i class="fa fa-globe fa-lg"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://seoanalyzer.me/en">English</a></li>
+                        <li><a href="https://seoanalyzer.me/de">German</a></li>
+                        <li><a href="https://seoanalyzer.me/es">Spanish</a></li>
+                        <li><a href="https://seoanalyzer.me/ru">Russian</a></li>
+                    </ul>
+                </li>
+                <li class="lang-li"><a>EN</a></li>
+            </ul>*@
+
+        <!--</nav>
+
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-            </div>
-        </div>
+        </div>-->
+        @RenderSection("navbarExtension", false)
     </div>
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+        @*<hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </footer>*@
     </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/libs")
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Scripts/requiredIfandnotemptyValidator.js"></script>
+    <script src="~/Scripts/requiredIfValidator.js"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>
