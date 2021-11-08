@@ -199,8 +199,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Mash.SEO-Analyser.NET\Mash.SEOAnalyzer.NET\Mash.SEOAnalyzer.NET.csproj">
-      <Project>{0a8ceb3d-4c98-4905-91b2-da7878655a61}</Project>
+    <ProjectReference Include="..\Mash.SEOAnalyzer.NET\Mash.SEOAnalyzer.NET\Mash.SEOAnalyzer.NET.csproj">
+      <Project>{49a5cee6-d873-4da1-95eb-a5f0fd2b32d6}</Project>
       <Name>Mash.SEOAnalyzer.NET</Name>
     </ProjectReference>
   </ItemGroup>
