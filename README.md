@@ -13,6 +13,7 @@ As for optimization, I implemented AhoCorasick Algorithm( The fastest alogrithm 
 - [Mash.HelperMethods.NET](https://github.com/its-mash/Mash.HelperMethods.NET.git)
 
 ### TODO
+- [ ] Fix result generation Error when Input Text is too long( Need to findout the root cause)
 - [ ] Add Input Validation (Frond-end, Backend) and Error Handling.
 - [ ] Add Html Page rendering( script rendering ) before SEO Analyzation 
 - [ ] Replace harsh Regex Checking to find possible External link with custom logics that utilize AhoCorasick pattern matching iteration( This will avoid reiteration of the same input)
